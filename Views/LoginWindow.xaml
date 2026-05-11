@@ -1,0 +1,36 @@
+<Window x:Class="GateFlowPro.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GateFlowPro - Login" Height="660" Width="1050" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="{StaticResource PrimaryBrush}">
+            <StackPanel Margin="70" VerticalAlignment="Center">
+                <TextBlock Text="GateFlowPro" Foreground="White" FontSize="48" FontWeight="Bold"/>
+                <TextBlock Text="Professional Gate Pass &amp; Transport Schedule Management" Foreground="#DCE8F8" FontSize="22" Margin="0,12,0,0" TextWrapping="Wrap"/>
+                <TextBlock Text="Desktop privacy • Local SQLite database • Official print layouts" Foreground="#AEC5E6" FontSize="15" Margin="0,26,0,0"/>
+                <Border Background="#1E4B7A" CornerRadius="16" Padding="22" Margin="0,42,0,0">
+                    <TextBlock Text="Vehicle number එක දුන්නාම Transporter සහ Type auto fill වෙන modern desktop solution එකක්." Foreground="White" TextWrapping="Wrap" FontSize="16"/>
+                </Border>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Column="1" Background="{StaticResource BgBrush}">
+            <Border Style="{StaticResource Card}" Width="390" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Text="Welcome Back" FontSize="30" FontWeight="Bold" Foreground="{StaticResource TextBrush}"/>
+                    <TextBlock Text="Login to continue" Foreground="#65758B" Margin="0,6,0,24"/>
+                    <TextBlock Text="Username" FontWeight="SemiBold"/>
+                    <TextBox x:Name="UsernameBox"/>
+                    <TextBlock Text="Password" FontWeight="SemiBold"/>
+                    <PasswordBox x:Name="PasswordBox"/>
+                    <Button Content="Login" Style="{StaticResource PrimaryButton}" Click="Login_Click"/>
+                    <Button Content="Create New Account" Style="{StaticResource LightButton}" Click="Register_Click"/>
+                    <TextBlock Text="Default admin: admin / admin123" Foreground="#65758B" Margin="0,22,0,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

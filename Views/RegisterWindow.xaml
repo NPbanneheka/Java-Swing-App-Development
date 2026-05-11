@@ -1,0 +1,27 @@
+<Window x:Class="GateFlowPro.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Account" Height="590" Width="480" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Border Style="{StaticResource Card}" Margin="20">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="Create User Account" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+                <TextBlock Text="Full Name" FontWeight="SemiBold"/>
+                <TextBox x:Name="FullNameBox"/>
+                <TextBlock Text="Username" FontWeight="SemiBold"/>
+                <TextBox x:Name="UsernameBox"/>
+                <TextBlock Text="Password" FontWeight="SemiBold"/>
+                <PasswordBox x:Name="PasswordBox"/>
+                <TextBlock Text="Phone" FontWeight="SemiBold"/>
+                <TextBox x:Name="PhoneBox"/>
+                <TextBlock Text="Role" FontWeight="SemiBold"/>
+                <ComboBox x:Name="RoleBox">
+                    <ComboBoxItem Content="Gate Officer" IsSelected="True"/>
+                    <ComboBoxItem Content="Supervisor"/>
+                    <ComboBoxItem Content="Admin"/>
+                </ComboBox>
+                <Button Content="Create Account" Style="{StaticResource PrimaryButton}" Click="Create_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Border>
+</Window>
